@@ -1,0 +1,51 @@
+/** ****** positioning the contents of a flex container ****** **/
+
+.flex-row-center, .flex-row-start, .flex-row-end, .flex-row-between,
+.flex-row-around, .flex-column-center, .flex-column-start, .flex-column-end,
+.flex-dir-column, .flex-dir-row, .flex-wrap {
+  display: flex
+}
+
+.flex-dir-column {
+  flex-direction: column;
+}
+
+.flex-dir-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-row-center {
+  justify-content: center;
+}
+
+.flex-row-start {
+  justify-content: flex-start;
+}
+
+.flex-row-end {
+  justify-content: flex-end;
+}
+
+.flex-row-between {
+  justify-content: space-between;
+}
+
+.flex-row-around {
+  justify-content: space-around;
+}
+
+.flex-column-center {
+  align-items: center;
+}
+
+.flex-column-start {
+  align-items: flex-start;
+}
+
+.flex-column-end {
+  align-items: flex-end;
+}
