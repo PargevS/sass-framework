@@ -1,0 +1,98 @@
+.buttons-group, .buttons-group-vertical {
+  display: inline-flex;
+  justify-content: flex-start;
+
+  & > .btn, & > .btn-md, & > .btn-lg, & > .btn-circle,
+  & > .btn-circle-md, & > .btn-circle-lg, & > .btn-circle-xl {
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+
+    &:hover {
+      -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+      filter: brightness(105%) !important;
+    }
+  }
+}
+
+.buttons-group-vertical {
+  flex-direction: column;
+
+  & > .btn, & > .btn-md, & > .btn-lg, & > .btn-circle,
+  & > .btn-circle-md, & > .btn-circle-lg, & > .btn-circle-xl {
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+      filter: brightness(105%) !important;
+    }
+  }
+}
+
+.buttons-group.rounded {
+  border-radius: 0 !important;
+
+  & > .btn:first-child, & > .btn-sm:first-child, & > .btn-md:first-child,
+  & > .btn-lg:first-child, & > .btn-xl:first-child {
+    border-radius: $button_group_rounding 0 0 $button_group_rounding;
+  }
+
+
+  & > .btn:last-child, & > .btn-sm:last-child, & > .btn-md:last-child,
+  & > .btn-lg:last-child, & > .btn-xl:last-child {
+    border-radius: 0 $button_group_rounding $button_group_rounding 0
+  }
+
+}
+
+@for $i from 1 through 5 {
+  .buttons-group.rounded-#{$i} {
+    border-radius: 0 !important;
+
+    & > .btn:first-child, & > .btn-sm:first-child, & > .btn-md:first-child,
+    & > .btn-lg:first-child, & > .btn-xl:first-child {
+      border-radius: #{$i + $button_group_rounding}px 0 0 #{$i + $button_group_rounding}px;
+    }
+
+    & > .btn:last-child, & > .btn-sm:last-child, & > .btn-md:last-child,
+    & > .btn-lg:last-child, & > .btn-xl:last-child {
+      border-radius: 0 #{$i + $button_group_rounding}px #{$i + $button_group_rounding}px 0
+    }
+
+  }
+}
+
+.buttons-group-vertical.rounded {
+  border-radius: 0 !important;
+
+  & > .btn:first-child, & > .btn-sm:first-child, & > .btn-md:first-child,
+  & > .btn-lg:first-child, & > .btn-xl:first-child {
+    border-radius: $button_group_rounding $button_group_rounding 0 0;
+  }
+
+
+  & > .btn:last-child, & > .btn-sm:last-child, & > .btn-md:last-child,
+  & > .btn-lg:last-child, & > .btn-xl:last-child {
+    border-radius: 0 0 $button_group_rounding $button_group_rounding;
+  }
+
+}
+
+@for $i from 1 through 5 {
+  .buttons-group-vertical.rounded-#{$i} {
+    border-radius: 0 !important;
+
+    & > .btn:first-child, & > .btn-sm:first-child, & > .btn-md:first-child,
+    & > .btn-lg:first-child, & > .btn-xl:first-child {
+      border-radius: #{$i + $button_group_rounding}px #{$i + $button_group_rounding}px 0 0;
+    }
+
+    & > .btn:last-child, & > .btn-sm:last-child, & > .btn-md:last-child,
+    & > .btn-lg:last-child, & > .btn-xl:last-child {
+      border-radius: 0 0 #{$i + $button_group_rounding}px #{$i + $button_group_rounding}px;
+    }
+
+  }
+}
