@@ -1,0 +1,39 @@
+.container {
+  width: 90% !important;
+  padding: 0 15px;
+  margin-left: 5% !important;
+}
+
+.container-fw {
+  width: 100% !important;
+  padding: 0;
+}
+
+/** ***** row styles ***** */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+
+  & > .clm, .clm-xs, .clm-sm, .clm-md, .clm-lg, .clm-xl, .clm-xxl {
+    width: calc(100% - #{$clmHorizontalMargin * 2});
+    margin: $clmVerticalMargin $clmHorizontalMargin;
+  }
+
+  @for $i from 1 through $clmNumber {
+    & > .clm-#{$i} {
+      width: calc(100% / #{$clmNumber} * #{$i} - #{$clmHorizontalMargin * 2});
+      margin: $clmVerticalMargin $clmHorizontalMargin;
+    }
+
+    & > .clm-xs-#{$i}, & > .clm-sm-#{$i}, & > .clm-md-#{$i},
+    & > .clm-lg-#{$i}, & > .clm-xl-#{$i}, & > .clm-xxl-#{$i} {
+      width: calc(100% - #{$clmHorizontalMargin * 2});
+      margin: $clmVerticalMargin $clmHorizontalMargin;
+    }
+  }
+
+}
